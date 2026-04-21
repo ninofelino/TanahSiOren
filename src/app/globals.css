@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media print {
+  /* Hide unnecessary UI elements */
+  button, 
+  label, 
+  .absolute,
+  input {
+    display: none !important;
+  }
+
+  /* Layout adjustments for print */
+  .flex.h-screen {
+    display: flex !important;
+    flex-direction: row !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  aside {
+    width: 300px !important;
+    height: auto !important;
+    position: static !important;
+    display: flex !important;
+    box-shadow: none !important;
+    border-right: 1px solid #ddd !important;
+  }
+
+  main {
+    flex: 1 !important;
+    height: 600px !important;
+  }
+
+  /* Force background colors and colors */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+

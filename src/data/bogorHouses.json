@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rumah Contoh 1",
+        "description": "Sebuah rumah contoh di Bogor.",
+        "imageUrl": "https://via.placeholder.com/150/FF0000/FFFFFF?text=Rumah+1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7793,
+          -6.6075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rumah Contoh 2",
+        "description": "Rumah lain di Bogor.",
+        "imageUrl": "https://via.placeholder.com/150/00FF00/FFFFFF?text=Rumah+2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.795,
+          -6.625
+        ]
+      }
+    }
+  ]
+}
