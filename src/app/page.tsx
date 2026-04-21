@@ -769,6 +769,28 @@ function HelpModal({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }
             </ul>
           </section>
 
+          {/* Iframe Snippet */}
+          <section className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <h3 className="text-sm font-bold text-slate-700 flex items-center gap-2 mb-2">
+              <span>🔗</span> Integrasi Aplikasi Eksternal (Iframe)
+            </h3>
+            <p className="text-[11px] text-slate-500 mb-2">Salin kode berikut untuk menampilkan peta ini di aplikasi Anda:</p>
+            <div className="bg-slate-900 text-orange-300 p-3 rounded-lg font-mono text-[10px] break-all relative group">
+              <code>
+                {`<iframe src="https://tanah-si-oren.vercel.app" width="100%" height="600px" frameborder="0"></iframe>`}
+              </code>
+              <button 
+                onClick={() => {
+                  navigator.clipboard.writeText('<iframe src="https://tanah-si-oren.vercel.app" width="100%" height="600px" frameborder="0"></iframe>');
+                  alert('Snippet berhasil disalin!');
+                }}
+                className="absolute top-2 right-2 bg-slate-800 text-white px-2 py-1 rounded text-[9px] hover:bg-slate-700 transition-colors"
+              >
+                Copy
+              </button>
+            </div>
+          </section>
+
           <div className="pt-4 border-t border-slate-100">
             <button 
               onClick={onClose}
